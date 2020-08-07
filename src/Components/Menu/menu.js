@@ -8,9 +8,14 @@ import MyModal from 'Components/Modal/modal';
 const Menu = ({ items, id }) => {
 
   const [menuItem, setMenuItem] = useState([]);
-  const [quantify, setQuantify] = useState(1);
   const [table, setTable] = useState();
   const [client, setClient] = useState();
+  const [resume, setResume] = useState(0);
+
+  const changeQuantity = (menuItemIndex, quantity) => {
+    menuItem[menuItemIndex].quantity = quantity
+    setMenuItem(menuItem)
+  }
 
   return (
     <div className='order-style'>
@@ -43,17 +48,19 @@ const Menu = ({ items, id }) => {
           <Input onChange={(e) => setClient(e.target.value)} className='input-style' placeholder='Nome' required >Cliente: </Input>
         </div>
 
+        <Input type='text' onChange={(e) => setResume(e.target.value)}></Input>
+
         <div className='order-information-wrapper'>
           <div className='ordered-wrapper'>
-            {menuItem.map(product =>
+            {menuItem.map((product, index) =>
               <div className='item-ordered'>
-                <p >{product.name}</p>
+                <p>{product.name}</p>
                 <div className='btn-order-wrapper'>
-                  <Button className='btn-add' onClick={() => setQuantify(quantify + 1)}>+</Button>
-                  <div className='quantify-ordered'>{quantify}</div>
-                  <Button className='btn-add' onClick={() => setQuantify(quantify - 1)}>-</Button>
+                  <Button className='btn-add' onClick={changeQuantity(index, product.quantity + 1)}>+</Button>
+                  <div className='quantify-ordered'>{product.quantity}</div>
+                  <Button className='btn-add' onClick={changeQuantity(index, product.quantity - 1)}>-</Button>
                 </div>
-                <div className='price-ordered'>{product.price}</div>
+                <div className='price-ordered'>{product.quantity * product.price}</div>
               </div>
             )}
           </div>
@@ -61,7 +68,7 @@ const Menu = ({ items, id }) => {
 
         <div className='value-wrapper'>
           <div className='total-value'>Total</div>
-          <div className='total-value'>R$5,00</div>
+          <div className='total-value'>{resume}</div>
         </div>
         <div className='btn-wrapper'>
           <Button className='btn-std'> Enviar</Button>
