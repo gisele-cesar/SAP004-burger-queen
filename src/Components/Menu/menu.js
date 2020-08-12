@@ -108,7 +108,7 @@ const Menu = ({ items }) => {
           <div className='total-value'>{total}</div>
         </div>
         <div className='btn-wrapper'>
-          <Button onClick={() => sendOrder(table, client)} type='button' className='btn-std'> Enviar</Button>
+          <Button onClick={() => sendOrder(table, client)} type='button' className='btn-std' children={'Enviar'} />
         </div>
       </div>
     </div >

@@ -53,7 +53,7 @@ const Login = () => {
           <Input className='input-login' onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Email' />
           <Input className='input-login' onChange={(e) => setPassword(e.target.value)} type='password' placeholder='Senha' />
 
-          <Button className='btn-std' onClick={signIn} type='button'>Entrar</Button>
+          <Button className='btn-std' onClick={signIn} type='button' children={'Entrar'} />
           <div>
             {msgType === 'sucesso' && <span><strong>WoW!</strong>Você está conectado! &#128526;</span>}
             {msgType === 'erro' && <span><strong>Ops!</strong>Verifique se a senha ou usuário estão corretos! &#128546;</span>}

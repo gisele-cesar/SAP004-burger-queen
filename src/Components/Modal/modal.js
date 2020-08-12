@@ -55,7 +55,7 @@ const MyModal = (props) => {
                     </>
                 )}
 
-                <Button onClick={sendAdds} type='button'>Adicionar</Button>
+                <Button onClick={sendAdds} type='button' children={'Adicionar'} />
 
             </Modal>
         </div>

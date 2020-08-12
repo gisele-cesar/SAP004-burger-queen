@@ -4,7 +4,7 @@ import LogoPiscando from 'Images/gifheader.gif';
 import { Link } from 'react-router-dom';
 import firebase from 'Config/firebase';
 import 'firebase/auth';
-
+import Button from '../Button/button';
 
 const HeaderKitchen = () => {
 
@@ -21,37 +21,19 @@ const HeaderKitchen = () => {
 
     return (
         <header className='header-wrapper-kitchen'>
-
             <div className='logo-header-wrapper'>
                 <img src={LogoPiscando} />
             </div>
-
-            {/* <button className='navbar-toggler' type='button' data-target='#navbar'>
-                <i className='fas fa-bars text-white'></i>
-                <div className='top-menu' id='navbar'>
-                    <ul className='navbar-nav mr-auto'>
-                        <li><Link className='link' to='/kitchen-new-order'>Pedido Cozinha</Link></li>
-                        <li><Link className='link' to='/kitchen-order-ready'>Pronto Cozinha</Link></li>
-                        <li><Link className='link' to='/finished-order'>Pedido Finalizado</Link></li>
-                        <li onClick={signOut}><Link className='link' to='/'>Sair</Link></li>
-                    </ul>
-                </div>
-            </button> */}
-
             <div className='all-btn-links'>
-
                 <div className='btn-routes'>
-                    <button className='btn-links'><Link className='link' to='/kitchen-new-order'>Pedido Cozinha</Link></button>
-                    <button className='btn-links'><Link className='link' to='/kitchen-order-ready'>Pronto Cozinha</Link></button>
-                    <button className='btn-links'><Link className='link' to='/finished-order-kitchen'>Pedido Finalizado</Link></button>
+                    <Button className='btn-links'><Link className='link' to='/kitchen-new-order' children={'Pedido Cozinha'} /></Button>
+                    <Button className='btn-links'><Link className='link' to='/kitchen-order-ready' children={'Pronto Cozinha'} /></Button>
+                    <Button className='btn-links'><Link className='link' to='/finished-order-kitchen' children={'Pedido finalizado'} /></Button>
                 </div>
-
                 <div className='btn-link-out'>
-                    <button className='btn-out' onClick={signOut}><Link className='link' to='/'>Sair</Link></button>
+                    <Button className='btn-out' onClick={signOut}><Link className='link' to='/' children={'Sair'} /></Button>
                 </div>
-
             </div>
-
         </header >
     );
 }

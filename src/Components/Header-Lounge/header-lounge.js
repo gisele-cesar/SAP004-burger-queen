@@ -4,6 +4,7 @@ import LogoPiscando from 'Images/gifheader.gif';
 import { Link } from 'react-router-dom';
 import firebase from 'Config/firebase';
 import 'firebase/auth';
+import Button from '../Button/button';
 
 
 const HeaderLounge = () => {
@@ -29,13 +30,13 @@ const HeaderLounge = () => {
       <div className='all-btn-links'>
 
         <div className='btn-routes'>
-          <button className='btn-links'><Link className='link' to='/lounge-new-order'>Novo Pedido</Link></button>
-          <button className='btn-links'><Link className='link' to='/lounge-order-ready'>Pedido Pronto</Link></button>
-          <button className='btn-links'><Link className='link' to='/finished-order-lounge'>Pedido Finalizado</Link></button>
+          <Button className='btn-links'><Link className='link' to='/lounge-new-order' children={'Novo Pedido'} /></Button>
+          <Button className='btn-links'><Link className='link' to='/lounge-order-ready' children={'Pedido Pronto'} /></Button>
+          <Button className='btn-links'><Link className='link' to='/finished-order-lounge' children={'Pedido Finalizado'} /></Button>
         </div>
 
         <div className='btn-link-out'>
-          <button className='btn-out' onClick={signOut}><Link className='link' to='/'>Sair</Link></button>
+          <Button className='btn-out' onClick={signOut}><Link className='link' to='/' children={'Sair'} /></Button>
         </div>
 
       </div>
