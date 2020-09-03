@@ -6,61 +6,61 @@
 .kitchen-ordered-wrapper, 
 .kitchen-table-wrapper, 
 .items-wrapper,
-.kitchen-name-quantity{
-display: flex;
+.kitchen-name-quantity {
+  display: flex;
 }
 
 .kitchen-order-wrapper,
 .kitchen-table-wrapper, 
 .kitchen-ordered-wrapper,
-.kitchen-order-info{
+.kitchen-order-info {
   flex-direction: column; 
 }
 
 .kitchen-table-number
 .kitchen-client-information 
-.waiter-information{
-	margin: 1.5px;
+.waiter-information {
+  margin: 1.5px;
 }
 
-.kitchen-order-wrapper{
-	background: #f2f2f2;
-	height: 500px;
-	width: 380px;
-	margin: 30px 25px 0px 25px;
-	border-radius: 20px;
-	border: 0px solid #ffffff;
-	box-shadow: 0px 0px 10px rgb(53, 52, 52);
+.kitchen-order-wrapper {
+  background: #f2f2f2;
+  height: 500px;
+  width: 380px;
+  margin: 30px 25px 0px 25px;
+  border-radius: 20px;
+  border: 0px solid #ffffff;
+  box-shadow: 0px 0px 10px rgb(53, 52, 52);
 }
 
-.kitchen-table-wrapper{
-	padding: 10px 20px;
+.kitchen-table-wrapper {
+  padding: 10px 20px;
 }
 
-.kitchen-table-information{
-	margin: 4px 0px;
+.kitchen-table-information {
+  margin: 4px 0px;
 }
 
-.kitchen-table-information-a{
-	margin: 4px 0px;
-	width: 230px;
+.kitchen-table-information-a {
+  margin: 4px 0px;
+  width: 230px;
 }
 
-.kitchen-time-wrapper, .finish-time-wrapper {
-	align-self: flex-end;
-	padding: 6px;
-	border: 2px solid whitesmoke;
-	border-radius: 25%;
-	background-color: whitesmoke;
-	font-size: 14px;
+.kitchen-time-wrapper,
+.finish-time-wrapper {
+  align-self: flex-end;
+  padding: 6px;
+  border: 2px solid whitesmoke;
+  border-radius: 25%;
+  background-color: whitesmoke;
+  font-size: 14px;
 }
 
 .kitchen-time-wrapper {
-	font-weight: 500;
+  font-weight: 500;
 }
 
-
-.kitchen-order-info{
+.kitchen-order-info {
   display: flex;
   align-items: center;
   margin: 6px 15px 15px 15px;
@@ -72,65 +72,62 @@ display: flex;
   background-color: white;
 }
 
-/* .btn-std{
-	padding: 23px;
-} */
-.kitchen-quantify-ordered{
-	margin-right: 4px;
-	width: 20px;
-}
-.strong-kitchen{
-	font-weight: 500;
-	margin-right: 4px;
+.kitchen-quantify-ordered {
+  margin-right: 4px;
+  width: 20px;
 }
 
-.items-wrapper{
-	display: flex;
+.strong-kitchen {
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.items-wrapper {
+  display: flex;
   justify-content: space-evenly;
   margin: 5px 0px;
   flex-direction: column;
 }
 
-
-.kitchen-price-ordered{
-	width: 75px;
+.kitchen-price-ordered {
+  width: 75px;
 }
 
 .total-wrapper {
-    align-items: end;
-    width: 110px;
-    color: black;
-    padding: 2px;
-    border-radius: 8px;
-    border: 0px solid #ffffff;
-    box-shadow: 0px 0px 3px #000000;
-    align-self: flex-end;
-    margin-right: 20px;
-	background-color: #009d8c;
-	display: flex;
-	justify-content: center;
-	margin-top: auto;
-	margin-bottom: 25px;
+  align-items: end;
+  width: 110px;
+  color: black;
+  padding: 2px;
+  border-radius: 8px;
+  border: 0px solid #ffffff;
+  box-shadow: 0px 0px 3px #000000;
+  align-self: flex-end;
+  margin-right: 20px;
+  background-color: #009d8c;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 25px;
 }
 
 .total-ordered {
-	display: flex;
-	justify-content: center;
-	font-weight: 500;
-	color: white;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  color: white;
 }
 
-.kitchen-item-ordered{
-	width: 200px;
+.kitchen-item-ordered {
+  width: 200px;
 }
-.kitchen-item-add{
+
+.kitchen-item-add {
   margin-left: 5px;
   width: 200px;
 }
 
 @media (max-width: 800px) {
-.kitchen-order-wrapper {
-  width: 300px;
-}
-
+  .kitchen-order-wrapper {
+    width: 300px;
+  }
 }

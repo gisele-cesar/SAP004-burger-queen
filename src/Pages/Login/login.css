@@ -1,140 +1,138 @@
 .login-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .logo-wrapper {
-    display: flex;
-    height: 100vh;
-    width: 80vw;
-    clip-path: polygon(0px 0px, 45vw 0px, 290vw 900vw, 0px 100%);
-    background: #009d8c;
+  display: flex;
+  height: 100vh;
+  width: 80vw;
+  clip-path: polygon(0px 0px, 45vw 0px, 290vw 900vw, 0px 100%);
+  background: #009d8c;
 }
 
 .form-wrapper {
-    display: flex;
-    padding-top: 40px;
-    margin: 0px 160px 0px 0px;
+  display: flex;
+  padding-top: 40px;
+  margin: 0px 160px 0px 0px;
 }
 
 .login-form {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.register-link {
+  margin-top: 20px;
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fa9494;
+}
+
+.register-link :last-child {
+  padding-left: 10px;
+  text-decoration-line: underline;
+  color: #fa9494;
+  transition: .2s;
+}
+
+.register-link :last-child:active {
+  color: #fa9494;
+}
+
+.register-link :last-child:hover {
+  color: #fa9494;
+}
+
+@media (max-width: 768px) {
+  .login-wrapper {
+    display: flex;
+    background-color: #009d8c;
+    flex-direction: column;
+    align-items: center;
+    height: 1024px;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    height: auto;
+    width: 400px;
+    clip-path: none;
+    margin-left: 0px;
+  }
+
+  .form-wrapper {
+    display: flex;
+    padding-top: 25px;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .login-form {
     flex-direction: column;
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-}
+  }
 
-.register-link {
+  .register-link {
     margin-top: 20px;
     display: flex;
-    font-size: 20px;
-    font-weight: 600;
-    color: #fa9494;
-}
+    font-size: 30px;
+    color: white;
+  }
 
-.register-link :last-child {
+  .register-link :last-child {
     padding-left: 10px;
     text-decoration-line: underline;
-    color: #fa9494;
+    color: white;
     transition: .2s;
+  }
 
-}
-
-.register-link :last-child:active {
+  .register-link :last-child:active {
     color: #fa9494;
-}
+  }
 
-.register-link :last-child:hover {
+  .register-link :last-child:hover {
     color: #fa9494;
-}
-
-@media (max-width: 768px) {
-    .login-wrapper {
-        display: flex;
-        background-color: #009d8c;
-        flex-direction: column;
-        align-items: center;
-        height: 1024px;
-    }
-
-    .logo-wrapper {
-        display: flex;
-        height: auto;
-        width: 400px;
-        clip-path: none;
-        margin-left: 0px;
-    }
-
-    .form-wrapper {
-        display: flex;
-        padding-top: 25px;
-        margin: 0px 0px 0px 0px;
-    }
-
-    .login-form {
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
-
-    .register-link {
-        margin-top: 20px;
-        display: flex;
-        font-size: 30px;
-        color: white;
-    }
-
-    .register-link :last-child {
-        padding-left: 10px;
-        text-decoration-line: underline;
-        color: white;
-        transition: .2s;
-
-    }
-
-    .register-link :last-child:active {
-        color: #fa9494;
-    }
-
-    .register-link :last-child:hover {
-        color: #fa9494;
-    }
+  }
 }
 
 @media (max-width: 414px) {
-    .login-wrapper {
-        background-color: #009d8c;
-        padding: 30px 10px 45px 10px;
-        width: 100%;
-        height: auto;
-        text-align: center;
-        margin-bottom: 0px;
-    }
+  .login-wrapper {
+    background-color: #009d8c;
+    padding: 30px 10px 45px 10px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 0px;
+  }
 
-    .logo-wrapper {
-        display: flex;
-        height: auto;
-        width: 200px;
-        clip-path: none;
-        justify-content: center;
-        margin-left: 0px;
-    }
+  .logo-wrapper {
+    display: flex;
+    height: auto;
+    width: 200px;
+    clip-path: none;
+    justify-content: center;
+    margin-left: 0px;
+  }
 
-    .form-wrapper {
-        display: flex;
-        padding-top: 35px;
-        margin: 10px 0px 0px 0px;
-    }
+  .form-wrapper {
+    display: flex;
+    padding-top: 35px;
+    margin: 10px 0px 0px 0px;
+  }
 
-    .register-link {
-        margin-top: 20px;
-        display: flex;
-        font-size: 20px;
-        color: white;
-    }
+  .register-link {
+    margin-top: 20px;
+    display: flex;
+    font-size: 20px;
+    color: white;
+  }
 }

@@ -1,117 +1,119 @@
-.modal-wrapper, .send-btn-modal  {
-	border: 2px solid #fa9494;
-	}
+.modal-wrapper, .send-btn-modal {
+  border: 2px solid #fa9494;
+}
 
-.modal-wrapper { 
-	display: flex;
-	background-color: white;
-	flex-direction: column;
-	height: 350px;
-	width: 350px;
-	margin: 10% 25%;
-	border-radius: 8%;
-	box-shadow: 0px 0px 20px 0px #fa9494;
-	padding: 10px;
-	position: relative;
-    left: 15%;
-    top: 0%;
-	}
-
+.modal-wrapper {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  height: 350px;
+  width: 350px;
+  margin: 10% 25%;
+  border-radius: 8%;
+  box-shadow: 0px 0px 20px 0px #fa9494;
+  padding: 10px;
+  position: relative;
+  left: 15%;
+  top: 0%;
+}
 
 .btn-modal-out {
-	display: flex;
-	width: 30px;
-	background-color: #8d8c8c;
-	border: solid #8d8c8c;
-	height: 30px;
-	justify-content: center;
-	align-self: flex-end;
-	border-radius: 25%;
-	font-weight: 700;
-	color: white;
-	margin-right: 10px;
+  display: flex;
+  width: 30px;
+  background-color: #8d8c8c;
+  border: solid #8d8c8c;
+  height: 30px;
+  justify-content: center;
+  align-self: flex-end;
+  border-radius: 25%;
+  font-weight: 700;
+  color: white;
+  margin-right: 10px;
 }
 
 .radio-modal[type='radio']:checked:after {
-	width: 18px;
-	height: 18px;
-	border-radius: 15px;
-	top: -3px;
-	left: -5px;
-	position: relative;
-	background-color: #009d8c;
-	content: '';
-	display: inline-block;
-	visibility: visible;
+  width: 18px;
+  height: 18px;
+  border-radius: 15px;
+  top: -3px;
+  left: -5px;
+  position: relative;
+  background-color: #009d8c;
+  content: '';
+  display: inline-block;
+  visibility: visible;
 }
-.radio-modal{
+
+.radio-modal {
 margin-left: 8px;
 }
-.modal-close{
-	padding: 0px;
-	margin: 0px;
-	align-self: center;
+
+.modal-close {
+  padding: 0px;
+  margin: 0px;
+  align-self: center;
 }
 
 .modal-options {
-	color: #009d8c;
-	background-color: whitesmoke;
-	border-radius: 5px;
-	text-align: center;
-	margin: 10px 0 10px 0;
-	font-size: 18px;
-	font-weight: 800;
-	padding: 4px 0px;
+  color: #009d8c;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px 0 10px 0;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 4px 0px;
 }
 
 aria-label {
-	font-size: 18px;
-	font-weight: 600;
-	padding-left: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 15px;
 }
 
 input[type='checkbox']:checked:after {
-	width: 20px;
-	height: 20px;
-	top: -3px;
-	left: -5px;
-	position: relative;
-	background-color: #009d8c; 
-	color: white;
-	content: '';
-	display: inline-block;
-	visibility: visible;
+  width: 20px;
+  height: 20px;
+  top: -3px;
+  left: -5px;
+  position: relative;
+  background-color: #009d8c; 
+  color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
 }
 
-.input-radio-wrapper{
-	display: flex;
-	justify-content: center;
-}
-.input-radio{
-	padding: 8px;
-}
-.input-radio-label{
-	margin-left: 10px;
-	font-size: 18px;
-	font-weight: 600;
-
-}
-.send-btn-modal{
-	background-color: #fa9494;
-	font-weight: 700;
-	color: white;
-	border-radius: 9px;
-	width: 180px;
-	align-self: center;
-	padding: 3px 0px;
-	font-size: 18px;
+.input-radio-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
+.input-radio {
+  padding: 8px;
+}
+
+.input-radio-label {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.send-btn-modal {
+  background-color: #fa9494;
+  font-weight: 700;
+  color: white;
+  border-radius: 9px;
+  width: 180px;
+  align-self: center;
+  padding: 3px 0px;
+  font-size: 18px;
+}
 
 @media (max-width: 800px) {
-	.modal-wrapper{
-	position: relative;
+  .modal-wrapper {
+    position: relative;
     left: 0%;
     top: 20%;
-	}
+  }
 }

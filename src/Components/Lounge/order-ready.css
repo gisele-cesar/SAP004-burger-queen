@@ -5,53 +5,56 @@
 .lounge-order-info, 
 .lounge-ordered-wrapper, 
 .lounge-table-wrapper, 
-.items-wrapper{
-display: flex;
+.items-wrapper {
+  display: flex;
 }
 
 .lounge-order-wrapper,
 .lounge-table-wrapper, 
 .lounge-ordered-wrapper,
-.lounge-order-info{
+.lounge-order-info {
   flex-direction: column; 
 }
 
 .lounge-table-number
 .lounge-client-information 
-.lounge-information{
-	margin: 1.5px;
+.lounge-information {
+  margin: 1.5px;
 }
-.lounge-order-wrapper{
-	background: #f2f2f2;
-	height: 500px;
-	width: 380px;
-	margin: 30px 25px 0px 25px;
-	border-radius: 20px;
-	border: 0px solid #ffffff;
-	box-shadow: 0px 0px 10px rgb(53, 52, 52);
+
+.lounge-order-wrapper {
+  background: #f2f2f2;
+  height: 500px;
+  width: 380px;
+  margin: 30px 25px 0px 25px;
+  border-radius: 20px;
+  border: 0px solid #ffffff;
+  box-shadow: 0px 0px 10px rgb(53, 52, 52);
 }
-.lounge-table-wrapper{
-	padding: 10px 20px;
-	
+
+.lounge-table-wrapper {
+  padding: 10px 20px;
 }
-.lounge-table-information{
-	margin: 4px 0px;
+
+.lounge-table-information {
+  margin: 4px 0px;
 }
-.lounge-table-information-a{
-	margin: 4px 0px;
-	width: 230px;
+
+.lounge-table-information-a {
+  margin: 4px 0px;
+  width: 230px;
 }
 
 .lounge-time-wrapper {
-	align-self: flex-end;
-	padding: 6px;
-	border: 2px solid whitesmoke;
-	border-radius: 25%;
-	background-color: whitesmoke;
-	margin-bottom: 4px;
+  align-self: flex-end;
+  padding: 6px;
+  border: 2px solid whitesmoke;
+  border-radius: 25%;
+  background-color: whitesmoke;
+  margin-bottom: 4px;
 }
 
-.lounge-order-info{
+.lounge-order-info {
   display: flex;
   align-items: center;
   margin: 6px 15px 15px 15px;
@@ -63,35 +66,37 @@ display: flex;
   background-color: white;
 }
 
-.btn-std{
-	display: flex;
-	align-self: center;
-	padding: 23px;
-}
-.lounge-quantify-ordered{
-	margin-right: 4px;
-	width: 20px;
-}
-.strong-lounge{
-	font-weight: 500;
-	margin-right: 4px;
+.btn-std {
+  display: flex;
+  align-self: center;
+  padding: 23px;
 }
 
-.items-wrapper{
+.lounge-quantify-ordered {
+  margin-right: 4px;
+  width: 20px;
+}
+
+.strong-lounge {
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.items-wrapper {
   justify-content: space-evenly;
   margin: 5px 0px;
 }
 
-.lounge-price-ordered{
-	width: 75px;
+.lounge-price-ordered {
+  width: 75px;
 }
 
-.lounge-item-ordered{
-	width: 200px;
+.lounge-item-ordered {
+  width: 200px;
 }
 
 @media (max-width: 800px) {
-.lounge-order-wrapper{
-  width: 300px;
-}
+  .lounge-order-wrapper {
+    width: 300px;
+  }
 }

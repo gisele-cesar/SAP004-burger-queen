@@ -75,7 +75,6 @@
   align-self: center;
   margin: 0px 0px 5px 0px;
   flex-wrap: wrap;
-
 }
 
 .btn-wrapper-lounge-order-ready {
@@ -90,7 +89,6 @@
   justify-content: center;
   margin-top: auto;
   margin-bottom: 15px;
-  
 }
 
 .btn-send-wrapper {
@@ -150,7 +148,6 @@
   .btn-wrapper {
     width: 730px;
     margin: 5px 13px;
-
   }
 
   .all-products-name {
@@ -172,7 +169,6 @@
     min-width: 320px;
     width: auto;
     margin: 5px 13px;
-
   }
 
   .btn-menu {
@@ -181,5 +177,4 @@
     display: flex;
     font: 20px;
   }
-
 }

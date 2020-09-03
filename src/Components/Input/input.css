@@ -1,66 +1,64 @@
 .input-login,
 .input-register {
-    display: flex;
-    background-color: white;
-    border: #fa9494 1.5px solid;
-    border-radius: 10px;
-    height: 40px;
-    width: 300px;
-    box-shadow: 0px 0px 20px 0px #fa9494;
+  display: flex;
+  background-color: white;
+  border: #fa9494 1.5px solid;
+  border-radius: 10px;
+  height: 40px;
+  width: 300px;
+  box-shadow: 0px 0px 20px 0px #fa9494;
 }
 
 .input-login {
-    margin: 30px 0 30px 0;
-    padding: 12px 0px 0px 10px;
+  margin: 30px 0 30px 0;
+  padding: 12px 0px 0px 10px;
 }
 
 .input-login::placeholder,
 .input-register::placeholder {
-    display: flex;
-    font-size: 20px;
+  display: flex;
+  font-size: 20px;
 }
 
 .input-register {
-    margin: 20px 0 20px 0;
-    height: 40px;
-    padding: 12px 0px 0px 10px;
+  margin: 20px 0 20px 0;
+  height: 40px;
+  padding: 12px 0px 0px 10px;
 }
 
 @media (max-width: 768px) {
-    .input-login {
-        margin: 30px 0 30px 0;
-        width: 350px;
-        height: 50px;
-        padding: 12px 0px 0px 10px;
-    }
+  .input-login {
+    margin: 30px 0 30px 0;
+    width: 350px;
+    height: 50px;
+    padding: 12px 0px 0px 10px;
+  }
 
-    .input-register {
-        margin: 15px 0 15px 0;
-        width: 350px;
-        height: 50px;
-        padding: 8px 0px 0px 8px;
-    }
-
+  .input-register {
+    margin: 15px 0 15px 0;
+    width: 350px;
+    height: 50px;
+    padding: 8px 0px 0px 8px;
+  }
 }
 
 @media (max-width: 450px) {
-    .input-login {
-        margin: 10px 0 10px 0;
-        width: 180px;
-        height: 30px;
-        padding: 5px 0px 0px 5px;
-    }
+  .input-login {
+    margin: 10px 0 10px 0;
+    width: 180px;
+    height: 30px;
+    padding: 5px 0px 0px 5px;
+  }
 
-    .input-login::placeholder,
-    .input-register::placeholder {
-        font-size: 18px;
-    }
+  .input-login::placeholder,
+  .input-register::placeholder {
+    font-size: 18px;
+  }
 
-    .input-register {
-        margin: 10px 0 10px 0;
-        width: 180px;
-        height: 30px;
-        padding: 5px 0px 0px 5px;
-    }
-
+  .input-register {
+    margin: 10px 0 10px 0;
+    width: 180px;
+    height: 30px;
+    padding: 5px 0px 0px 5px;
+  }
 }

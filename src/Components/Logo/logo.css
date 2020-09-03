@@ -1,54 +1,59 @@
 .logo-login {
-    display: flex;
-    align-items: center;
-    margin: 0 20%;
- }
-
- .logo-login img{
-    width: auto;
-    height: 450px;
+  display: flex;
+  align-items: center;
+  margin: 0 20%;
 }
+
+.logo-login img {
+  width: auto;
+  height: 450px;
+}
+
 .logo-header-wrapper { 
-    margin: 10px;
+  margin: 10px;
 }
 
 .logo-register {
-    display: flex;
-    align-items: center;
-    margin: 0 20%;
- }
- .logo-register img{
-    width: auto;
-    height: 450px;
+  display: flex;
+  align-items: center;
+  margin: 0 20%;
+}
+
+.logo-register img {
+  width: auto;
+  height: 450px;
 }
 
 @media (max-width: 768px) {
-    .logo-login {
-        padding-top: 40px; 
-        margin: 25px 25px 15px 15px;
-    }
-    .logo-register {
-        padding-top: 15px; 
-        margin: 15px 25px 15px 15px;
-    }
+  .logo-login {
+    padding-top: 40px; 
+    margin: 25px 25px 15px 15px;
+  }
+
+  .logo-register {
+    padding-top: 15px; 
+    margin: 15px 25px 15px 15px;
+  }
 }
 
 @media (max-width: 450px) {
-    .logo-login {
-        padding-top: 10px; 
-        margin: 5px 5px 5px 0px;
-     }
-     .logo-login img{
-        width: auto;
-        height: 250px;
-    }
+  .logo-login {
+    padding-top: 10px; 
+    margin: 5px 5px 5px 0px;
+  }
 
-    .logo-register {
-        padding-top: 5px; 
-        margin: 5px 5px 5px 0px;
- }
-    .logo-register img{
-        width: auto;
-        height: 200px;
-}
+  .logo-login img {
+    width: auto;
+    height: 250px;
+  }
+
+  .logo-register {
+    padding-top: 5px; 
+    margin: 5px 5px 5px 0px;
+  }
+
+  .logo-register img {
+    width: auto;
+    height: 200px;
+  }
 }

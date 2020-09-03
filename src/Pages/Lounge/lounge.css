@@ -3,7 +3,7 @@
   justify-content: space-around;
 }
 
-.order-list{
+.order-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
