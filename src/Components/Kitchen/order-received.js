@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Button from 'Components/Button/button';
+import FormatDate from 'Components/Utils/utils';
 import './kitchen.css';
 import firebase from 'Config/firebase';
 import growl from 'growl-alert';
 import 'growl-alert/dist/growl-alert.css';
-
 
 const OrdersReceived = ({ idDoc, state, time, table, client, menuItem, removeOrder, waiterName }) => {
 
@@ -21,30 +21,18 @@ const OrdersReceived = ({ idDoc, state, time, table, client, menuItem, removeOrd
       })
   }
 
-  const formatDate = (dateOrder) => {
-    if (dateOrder != null) {
-      const options = {
-        year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
-        second: '2-digit'
-      };
-      return new Date(dateOrder).toLocaleString([], options);
-    }
-  }
-
   return (
     <div className='kitchen-order-wrapper'>
       <div className='kitchen-table-wrapper'>
-        <div className='kitchen-time-wrapper'>{formatDate(time)}</div>
+        <div className='kitchen-time-wrapper'>{FormatDate(time)}</div>
         <div className='client-table-wrapper'>
-          <div className='kitchen-table-information-a'><span className='strong-kitchen'>Cliente: </span>{client} </div>
-          <div className='kitchen-table-information'><span className='strong-kitchen'>Mesa: </span> {table} </div>
+          <div className='kitchen-table-information-a'><span className='strong-kitchen'>Cliente: </span>{client}</div>
+          <div className='kitchen-table-information'><span className='strong-kitchen'>Mesa: </span> {table}</div>
         </div>
         <div className='kitchen-table-information'><span className='strong-kitchen'>Status: </span>{state}</div>
-        <div className='kitchen-table-information'><span className='strong-kitchen'>Atendente: </span>{waiterName}  </div>
+        <div className='kitchen-table-information'><span className='strong-kitchen'>Atendente: </span>{waiterName}</div>
       </div>
-
       <div className='kitchen-order-info'>
-
         <div className='kitchen-ordered-wrapper'>
           {menuItem.filter(item => item.hamburger === true).map(element =>
             <div className='items-wrapper'>
@@ -53,8 +41,7 @@ const OrdersReceived = ({ idDoc, state, time, table, client, menuItem, removeOrd
                 <div className='kitchen-item-ordered'>{element.name}</div>
               </div>
               <div className='kitchen-item-add'>- Sabor: {element.burgerOption}</div>
-              <div className='kitchen-item-add'>- Adicionais: {`${element.adds.join(", ")
-                } `}</div>
+              <div className='kitchen-item-add'>- Adicionais: {`${element.adds.join(", ")}`}</div>
             </div>
           )}
           {menuItem.filter(item => item.hamburger === false).map(element =>
@@ -67,12 +54,10 @@ const OrdersReceived = ({ idDoc, state, time, table, client, menuItem, removeOrd
           )}
         </div>
       </div>
-
       <div className='btn-wrapper-order-received'>
         <Button onClick={() => { upDateStatus(idDoc) }} className='btn-order-kitchen' type='button' children={'Pronto para servir'} />
       </div>
-
-    </div >
+    </div>
   )
 }
 

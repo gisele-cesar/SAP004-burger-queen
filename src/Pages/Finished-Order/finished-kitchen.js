@@ -1,4 +1,3 @@
-  
 import React, { useState, useEffect } from 'react';
 import HeaderKitchen from 'Components/Header-Kitchen/header-kitchen';
 import FinalizedOrders from 'Components/Kitchen/finished-order';
@@ -32,7 +31,7 @@ const FinishedKitchen = () => {
         <HeaderKitchen />
       </div>
       <div className='order-list'>
-        {finalizedOrder.map(item => <FinalizedOrders key={item.id} time={item.time} table={item.table} client={item.client} menuItem={item.menuItem} state={item.state} idDoc={item.id} waiterName={item.waiterName} total={item.total} endTime={item.endTime} />)}
+        {finalizedOrder.map(item => <FinalizedOrders time={item.time} table={item.table} client={item.client} menuItem={item.menuItem} state={item.state} waiterName={item.waiterName} total={item.total} endTime={item.endTime} />)}
       </div>
     </div>
   )

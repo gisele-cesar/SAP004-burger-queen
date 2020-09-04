@@ -1,10 +1,10 @@
 import React from 'react';
 import Button from 'Components/Button/button';
-import 'Components/Lounge/order-ready.css';
+import FormatDate from 'Components/Utils/utils';
+import './order-ready.css';
 import firebase from 'Config/firebase';
 import growl from 'growl-alert';
 import 'growl-alert/dist/growl-alert.css';
-
 
 const OrderReady = ({ idDoc, state, time, table, client, menuItem, removeOrder, waiterName }) => {
 
@@ -22,20 +22,10 @@ const OrderReady = ({ idDoc, state, time, table, client, menuItem, removeOrder, 
       })
   }
 
-  const formatDate = (dateOrder) => {
-    if (dateOrder != null) {
-      const options = {
-        year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
-        second: '2-digit'
-      };
-      return new Date(dateOrder).toLocaleString([], options);
-    }
-  }
-
   return (
     <div className='lounge-order-wrapper'>
       <div className='lounge-table-wrapper'>
-        <div className='lounge-time-wrapper'>{formatDate(time)}</div>
+        <div className='lounge-time-wrapper'>{FormatDate(time)}</div>
         <div className='client-table-wrapper'>
           <div className='lounge-table-information-a'><span className='strong-lounge'>Cliente: </span>{client} </div>
           <div className='lounge-table-information'><span className='strong-lounge'>Mesa: </span> {table} </div>
@@ -43,9 +33,7 @@ const OrderReady = ({ idDoc, state, time, table, client, menuItem, removeOrder, 
         <div className='lounge-table-information'><span className='strong-lounge'>Status: </span>{state}</div>
         <div className='lounge-table-information'><span className='strong-lounge'>Atendente: </span>{waiterName} </div>
       </div>
-
       <div className='lounge-order-info'>
-
         <div className='lounge-ordered-wrapper'>
           {menuItem.filter(item => item.hamburger === true).map(element =>
             <div className='items-wrapper'>
@@ -54,8 +42,7 @@ const OrderReady = ({ idDoc, state, time, table, client, menuItem, removeOrder, 
                 <div className='lounge-item-ordered'>{element.name}</div>
               </div>
               <div className='lounge-item-ordered'>- Sabor: {element.burgerOption}</div>
-              <div className='lounge-item-ordered'>- Adicionais: {`${element.adds.join(", ")
-                } `}</div>
+              <div className='lounge-item-ordered'>- Adicionais: {`${element.adds.join(", ")}`}</div>
             </div>
           )}
           {menuItem.filter(item => item.hamburger === false).map(element =>
