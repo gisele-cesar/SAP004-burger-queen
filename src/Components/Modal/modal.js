@@ -14,33 +14,27 @@ const MyModal = (props) => {
     if (e.target.checked) {
       setAdds([...adds, selectedAdd])
     } else {
-      console.log('qualquer coisa')
       setAdds([selectedAdd])
-
     }
   }
+
   const sendAdds = () => {
-    console.log(props.product.price)
-    console.log(adds)
     props.addNewItem({ ...props.product, adds, burgerOption, price: props.product.price + adds.length })
     setModalIsOpen(false)
-    console.log('adiciona aí')
   }
 
   return (
-    <div>
+    <>
       <Button onClick={() => setModalIsOpen(true)} className='btn-menu'>{props.children}</Button>
-
       <Modal {...props} isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className='modal-wrapper'>
         <Button onClick={() => setModalIsOpen(false)} className='btn-modal-out'><p className='modal-close' children={'X'}></p></Button>
         <div className='modal-options'>Opções do Hambúrguer</div>
         {props.options.map(option =>
           <>
-            <span><Input type='radio' onChange={(e) => {
-              setBurgerOption(e.target.value)
-              console.log(e.target.value)
-            }} className='radio-modal' name='options' value={option} />
-              <aria-label htmlFor={option}>{option}</aria-label></span>
+            <span>
+              <Input type='radio' onChange={(e) => { setBurgerOption(e.target.value) }} className='radio-modal' name='options' value={option} />
+              <aria-label htmlFor={option}>{option}</aria-label>
+            </span>
           </>
         )}
         <div className='adds-wrapper'>
@@ -55,10 +49,9 @@ const MyModal = (props) => {
           </div>
         </div>
         <Button onClick={sendAdds} className='send-btn-modal' type='button' children={'Adicionar'}></Button>
-
       </Modal>
-    </div>
-  );
+    </>
+  )
 };
 
 export default MyModal;

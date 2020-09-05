@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './menu.css';
-import '../Lounge/order-ready.css'
+import '../Lounge/order-ready.css';
 import Button from 'Components/Button/button';
 import Input from 'Components/Input/input';
 import MyModal from 'Components/Modal/modal';
-import firebase from 'Config/firebase'
+import firebase from 'Config/firebase';
 import growl from 'growl-alert';
 import 'growl-alert/dist/growl-alert.css';
 
@@ -21,7 +21,7 @@ const Menu = ({ items }) => {
         client,
         table,
         menuItem,
-        waiterName: userLounge.displayName, 
+        waiterName: userLounge.displayName,
         state: 'Preparando',
         time: Date.now(),
         total
@@ -52,7 +52,6 @@ const Menu = ({ items }) => {
       const i = menuItem.indexOf(product)
       menuItem.splice(i, 1)
     }
-
     setMenuItem([...menuItem])
   }
 
@@ -65,7 +64,6 @@ const Menu = ({ items }) => {
     product.quantity = 1
     setMenuItem([...menuItem, product])
   }
-
 
   let total = 0
   menuItem.map(product => {
@@ -82,26 +80,21 @@ const Menu = ({ items }) => {
               {items.filter(item => item.breakfast === true).map((product, index) => <Button onClick={() => addNewItem(product)} className='btn-menu' type='button' key={`btn-menu-${index}`}> {<img src={product.icon} className='icon-btn' alt='Icone do produto' />} {product.name} <br></br> R$ {product.price},00 </Button>)}
             </div>
           </div>
-
           <div className='menu-lunch'>
             <div className='label-menu'>Almoço / Jantar</div>
             <div className='btn-wrapper'>
               {items.filter(item => item.breakfast === false && item.hamburger === false).map((product, index) => <Button onClick={() => addNewItem(product)} className='btn-menu' type='button' key={`btn-menu-${index}`}> {<img src={product.icon} className='icon-btn' alt='Icone do produto' />} {product.name} <br></br> R$ {product.price},00 </Button>)}
-
               {items.filter(item => item.breakfast === false && item.hamburger === true).map((product, index) => <MyModal className='btn-menu' type='button' key={`btn-menu-${index}`} adds={product.adds} options={product.options} addNewItem={addNewItem} product={product} > {<img src={product.icon} className='icon-btn' alt='Icone do produto' />} {product.name} <br></br> R$ {product.price},00 </MyModal>)}
-
             </div>
           </div>
         </div >
       </section>
-
       <section className='order-table-wrapper'>
         <div className='table-wrapper'>
           <div className='display-name-lounge'>Atendente: {userLounge && userLounge.displayName}</div>
           <Input value={client} onChange={(e) => setClient(e.target.value)} type='text' className='input-style' placeholder='Cliente' required="required" requiredTxt='Preencha o nome do cliente'>Cliente: </Input>
           <Input value={table} onChange={(e) => setTable(e.target.value)} type='number' className='input-style' placeholder='Mesa' required >Mesa:</Input>
         </div>
-
         <div className='order-information-wrapper'>
           <div className='ordered-wrapper'>
             {menuItem.map(product =>
@@ -112,11 +105,9 @@ const Menu = ({ items }) => {
                   </div>
                   <div className='all-add-option'>
                     {!!product.burgerOption && <p className='product-add-option'>- Sabor: {product.burgerOption}</p>}
-                    {!!product.adds && <p className='product-add-option'>- Adicionais: {`${product.adds.join(", ")
-                      } `}</p>}
+                    {!!product.adds && <p className='product-add-option'>- Adicionais: {`${product.adds.join(", ")}`}</p>}
                   </div>
                 </div>
-
                 <div className='btn-order-wrapper'>
                   <Button className='btn-add' type='button' onClick={() => changeQuantity(product, 1)}><i className="fas fa-plus"></i></Button>
                   <div className='quantify-ordered'>{product.quantity}</div>
@@ -127,7 +118,6 @@ const Menu = ({ items }) => {
             )}
           </div>
         </div>
-
         <div className='value-wrapper'>
           <div className='total-value'>Total</div>
           <div className='total-value'>{total},00 </div>
